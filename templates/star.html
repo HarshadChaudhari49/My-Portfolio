@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space Animation</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #0e0c28;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Star Layers */
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      width: 100%;
+      height: 200%;
+      background-repeat: repeat;
+      background-size: contain;
+      z-index: 0;
+    }
+
+    .stars {
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: moveStars 40s linear infinite;
+    }
+
+    .stars2 {
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: moveStars 50s linear infinite;
+      opacity: 0.5;
+    }
+
+    .stars3 {
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: moveStars 100s linear infinite;
+      opacity: 0.2;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 10000px; }
+    }
+
+    /* Planet Styling */
+    .planet {
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    .planet1 {
+      top: 20%;
+      left: 15%;
+      width: 80px;
+      height: 80px;
+      background-image: url('https://cdn-icons-png.flaticon.com/128/8787/8787374.png');
+      animation: orbit1 15s linear infinite;
+    }
+
+    .planet2 {
+      top: 60%;
+      left: 75%;
+      width: 80px;
+      height: 80px;
+      background-image: url('image/4.png');
+      animation: orbit2 20s linear infinite;
+    }
+
+    .planet3 {
+      top: 35%;
+      left: 45%;
+      width: 80px;
+      height: 80px;
+      background-image: url('image/5.png');
+      animation: orbit3 25s linear infinite;
+    }
+
+    .planet4 {
+      top: 85%;
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      background-image: url('image/saturn.png');
+      animation: orbit4 30s linear infinite;
+    }
+
+    /* Planet Animations */
+    @keyframes orbit1 {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(150px, 50px) rotate(90deg); }
+      50% { transform: translate(100px, -80px) rotate(180deg); }
+      75% { transform: translate(-150px, 50px) rotate(270deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    @keyframes orbit2 {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-180px, -90px) rotate(180deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    @keyframes orbit3 {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(120px, -140px) rotate(180deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    @keyframes orbit4 {
+      0% { transform: translate(0,0) rotate(0deg); }
+      100% { transform: translate(200px, 0); }
+    }
+
+    /* Rocket Styling */
+    .rocket {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-image: url('https://media.tenor.com/8OPCLlcaQoMAAAAm/cartoon-xolo.webp');
+      background-size: cover;
+      background-position: center;
+      bottom: -100px;
+      left: -100px;
+      animation: rocketAnimation 10s ease-in-out forwards;
+      z-index: 2;
+    }
+
+    @keyframes rocketAnimation {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(50vw, -50vh) scale(1.5); }
+      100% { transform: translate(100vw, -100vh) scale(1); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .rocket {
+        width: 80px;
+        height: 80px;
+      }
+
+      .planet {
+        width: 60px !important;
+        height: 60px !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <div class="planet planet1"></div>
+  <div class="planet planet2"></div>
+  <div class="planet planet3"></div>
+  <div class="planet planet4"></div>
+
+  <div class="rocket" id="rocket"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const rocket = document.getElementById("rocket");
+
+      rocket.addEventListener("animationend", function () {
+        window.location.href = "index"; // Navigate after animation ends
+      });
+    });
+  </script>
+</body>
+</html>
