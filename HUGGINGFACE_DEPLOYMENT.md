@@ -187,7 +187,7 @@ git lfs install
 Add the Hugging Face Space as another remote:
 
 ```bash
-git remote add space https://huggingface.co/spaces/YOUR_HF_USERNAME/YOUR_SPACE_NAME
+git remote add space https://huggingface.co/spaces/harshad49/portfolio
 ```
 
 Push your GitHub code to Hugging Face:
@@ -234,7 +234,7 @@ Your Space > Logs
 When the build succeeds, open:
 
 ```text
-https://huggingface.co/spaces/YOUR_HF_USERNAME/YOUR_SPACE_NAME
+https://huggingface.co/spaces/harshad49/portfolio
 ```
 
 ## 11. Update Deployment After Code Changes
@@ -286,7 +286,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions"
-          git remote add space https://harshad:${HF_TOKEN}@huggingface.co/spaces/YOUR_HF_USERNAME/YOUR_SPACE_NAME
+          git remote add space https://harshad49:${HF_TOKEN}@huggingface.co/spaces/harshad49/portfolio
           git push space main --force
 ```
 
@@ -353,7 +353,7 @@ Short version:
 git add .
 git commit -m "Add Docker deployment"
 git push origin main
-git remote add space https://huggingface.co/spaces/YOUR_HF_USERNAME/YOUR_SPACE_NAME
+git remote add space https://huggingface.co/spaces/harshad49/portfolio
 git push space main
 ```
 
