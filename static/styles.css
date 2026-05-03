@@ -813,3 +813,309 @@ nav ul li a:hover {
 #chatbot-icon:hover {
   transform: scale(1.1);
 }
+
+/* Responsive layout polish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 92px;
+}
+
+body {
+  color: #fff;
+}
+
+nav {
+  width: 100%;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+nav h1 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+nav ul {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+nav ul li a {
+  display: inline-flex;
+  margin-right: 0;
+  min-height: 40px;
+  align-items: center;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 420px);
+  width: min(100%, 1200px);
+  min-height: 100svh;
+  height: auto;
+  margin: 0 auto 70px;
+  padding: 130px 24px 80px;
+  align-items: center;
+  gap: clamp(28px, 6vw, 80px);
+  text-align: left;
+}
+
+.home-content {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 640px;
+  margin: 0;
+}
+
+.home-content h3,
+.home-content h1 {
+  margin-right: 0;
+}
+
+.home-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.home-content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.home-content p {
+  line-height: 1.7;
+}
+
+.text {
+  font-size: inherit;
+}
+
+.image-container {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  top: auto;
+  right: auto;
+  width: clamp(230px, 32vw, 390px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  transform: none;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(240px, 420px) minmax(0, 1fr);
+  width: min(100%, 1200px);
+  margin: 0 auto 80px;
+  padding: 100px 24px;
+  align-items: center;
+  gap: clamp(32px, 7vw, 96px);
+  text-align: left;
+}
+
+.about-img {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  position: relative;
+  width: clamp(230px, 32vw, 390px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.about h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+}
+
+.about p {
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.75;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+
+.btn-cv {
+  margin-left: 0;
+  margin-top: 24px;
+}
+
+.skills {
+  width: 100%;
+  padding: 90px 24px;
+}
+
+.skills-container {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+}
+
+.skill-card {
+  width: clamp(170px, 24vw, 270px);
+  height: auto;
+  aspect-ratio: 0.82;
+  border-radius: 14px;
+}
+
+#projects {
+  padding: 90px 24px;
+}
+
+.project {
+  width: min(100%, 680px);
+  border-radius: 12px;
+}
+
+.pro {
+  min-height: 230px;
+  height: auto;
+  padding: 36px 20px;
+  border-radius: 0;
+}
+
+.modal {
+  padding: 18px;
+}
+
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.platform {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+#chatbot-icon {
+  right: clamp(16px, 4vw, 30px);
+  bottom: clamp(16px, 4vw, 30px);
+}
+
+@media (max-width: 900px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 14px 16px;
+  }
+
+  nav h1 {
+    font-size: 1.25rem;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    padding: 8px 10px;
+    font-size: 0.95rem;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+    padding-top: 170px;
+    text-align: center;
+  }
+
+  .home-content,
+  .image-container {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .home-content {
+    margin: 0 auto;
+  }
+
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .about-img,
+  .about h2,
+  .about p,
+  .about > div {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .about p {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    scroll-padding-top: 190px;
+  }
+
+  nav ul {
+    max-height: 96px;
+    overflow-y: auto;
+  }
+
+  .home {
+    padding: 205px 18px 64px;
+    margin-bottom: 24px;
+  }
+
+  .image-container,
+  .about-img {
+    width: min(72vw, 280px);
+    box-shadow: 0 0 24px 8px rgba(0, 255, 255, 0.7),
+      0 0 50px 16px rgba(0, 255, 255, 0.4);
+  }
+
+  .home-sci a,
+  .platform a {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .btn-box,
+  .btn-cv,
+  .contact-btn,
+  .send-btn {
+    width: min(100%, 260px);
+  }
+
+  .skills-container {
+    gap: 16px;
+  }
+
+  .skill-card {
+    width: min(100%, 220px);
+  }
+
+  .project h3 {
+    line-height: 1.35;
+  }
+
+  #chatbot-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
