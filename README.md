@@ -1,3 +1,12 @@
+---
+title: Harshad Personal Portfolio
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+---
+
 # Harshad's Personal Portfolio
 
 A responsive personal portfolio website for Harshad Chaudhari, built with Flask, HTML, CSS, and JavaScript. The site includes a space-themed splash screen, portfolio sections, project highlights, a contact form, and an AI chatbot powered by Hugging Face Transformers.

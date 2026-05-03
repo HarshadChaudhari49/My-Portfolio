@@ -1,0 +1,15 @@
+.git
+.gitignore
+.gitattributes
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+screenshots/
