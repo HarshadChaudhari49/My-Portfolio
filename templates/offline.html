@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#007bff">
+  <title>Offline | Harshad Portfolio</title>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0e0c28;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 24px;
+    }
+
+    main {
+      max-width: 420px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 32px;
+    }
+
+    p {
+      margin: 0 0 24px;
+      color: #d8d8ea;
+      line-height: 1.6;
+    }
+
+    a {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>You are offline</h1>
+    <p>The portfolio pages you opened before can still work offline. The chatbot and contact form need an internet connection.</p>
+    <a href="/index">Back to Portfolio</a>
+  </main>
+  <script src="{{ url_for('static', filename='pwa.js') }}" defer></script>
+</body>
+</html>

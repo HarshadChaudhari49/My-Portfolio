@@ -55,6 +55,14 @@ def index():
 def chatbot():
     return render_template('chatbot.html')
 
+@head.route('/offline')
+def offline():
+    return render_template('offline.html')
+
+@head.route('/service-worker.js')
+def service_worker():
+    return send_from_directory(head.static_folder, "service-worker.js", mimetype="application/javascript")
+
 
 @head.route('/ask', methods=["POST"])
 def ask():

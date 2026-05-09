@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#007bff">
   <title>AI Chatbot</title>
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/icon-192.png') }}">
   <style>
     :root {
       --primary-color: #007bff;
@@ -242,6 +245,7 @@
       }
     };
   </script>
+  <script src="{{ url_for('static', filename='pwa.js') }}" defer></script>
 
 </body>
 </html>
